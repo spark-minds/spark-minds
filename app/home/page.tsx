@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function DashboardHome() {
   return (
     <div className="min-h-screen">
@@ -11,11 +13,14 @@ export default function DashboardHome() {
                   Day 4 out of 30 completed
                 </span>
                 <span className="text-xs text-slate-500">
-                  4 activities done • 23% of 30-day journey
+                  4 activities done 
                 </span>
               </div>
               <div className="h-2 w-full overflow-hidden rounded-full bg-slate-200">
-                <div className="h-full w-[23%] rounded-full bg-gradient-to-r from-violet-500 to-sky-500" />
+                <div className="h-full w-[23%] rounded-full bg-gradient-to-r from-[#3498DB] to-[#8E44AD]" />
+              </div>
+              <div className="text-xs text-right text-slate-500">
+                  23% of 30-day journey
               </div>
             </section>
 
@@ -31,14 +36,17 @@ export default function DashboardHome() {
               </div>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
                 {[
-                  { title: "Listening Skills", subtitle: "Yesterday" },
-                  { title: "Speech Practice", subtitle: "2 days ago" },
-                  { title: "Vocabulary", subtitle: "4 days ago" },
+                  { title: "Listening Skills", subtitle: "Yesterday", image: "/listening.svg" },
+                  { title: "Speech Practice", subtitle: "2 days ago", image: "/mic.png" },
+                  { title: "Vocabulary", subtitle: "4 days ago", image: "/book.png" },
                 ].map((item) => (
                   <div
                     key={item.title}
                     className="flex flex-col gap-1 rounded-xl border border-slate-100 bg-white p-4 text-sm shadow-xs"
                   >
+                    <div className="w-fit p-2 bg-[#F3E9FB]">
+                    <Image src={item.image as string} alt={item.title} width={20} height={20} />
+                    </div>
                     <span className="font-medium text-slate-900">
                       {item.title}
                     </span>
