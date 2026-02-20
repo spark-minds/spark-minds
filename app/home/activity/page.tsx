@@ -1,4 +1,5 @@
 import Activity from "@/components/activity/activity";
+import Feedback from "@/components/feedback/feedback";
 
 export default function ActivityPage() {
   return (
@@ -12,8 +13,9 @@ export default function ActivityPage() {
               A fun science craft for ages 6–8 to learn about propulsion.
             </p>
           </section>
-        <main className="flex flex-1 justify-center px-4">
+        <main className="flex flex-col gap-4 justify-center px-4">
           <Activity />
+          <Feedback />
         </main>
       </div>
     </div>
