@@ -94,7 +94,7 @@ export default function Activity() {
             <h2 className="text-lg font-semibold text-slate-900 md:text-xl">
               Step-by-Step Activity
             </h2>
-            <Link href="#step-1" className="text-sm font-medium text-sky-500 underline hover:text-sky-700">Tips For Parents</Link>
+            <Link href="/home/activity/parent_tips" className="text-sm font-medium text-sky-500 underline hover:text-sky-700">Tips For Parents</Link>
         </div>
         {/* <h2 className="text-lg font-semibold text-slate-900 md:text-xl">
           Step-by-Step Activity
